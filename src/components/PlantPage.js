@@ -50,12 +50,33 @@ function PlantPage() {
       setPlantList(trimmedDownPlantList)
     })
   }
+
+  function handleUpdatePrice(e, id){
+    fetch(`http://localhost:6001/plants/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({price: e.target.value})
+    })
+    .then(r => r.json())
+    .then(plant => {
+      const newList = plantList.map(lsPlant => {
+        if(lsPlant.id === id) {
+          return plant
+        } else {
+          return lsPlant
+        }
+      })
+      setPlantList(newList)
+    })
+  }
   
   return (
     <main>
       <NewPlantForm handleSubmit={handleSubmit} />
       <Search handleSearch={handleSearch} />
-      <PlantList plantList={plantList} handleDelete={handleDelete} />
+      <PlantList plantList={plantList} handleDelete={handleDelete} handleUpdatePrice={handleUpdatePrice} />
     </main>
   );
 }

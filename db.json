@@ -4,19 +4,19 @@
       "id": 1,
       "name": "Aloe",
       "image": "./images/aloe.jpg",
-      "price": 15.99
+      "price": "15"
     },
     {
       "id": 2,
       "name": "ZZ Plant",
       "image": "./images/zz-plant.jpg",
-      "price": 25.98
+      "price": "26"
     },
     {
       "id": 3,
       "name": "Pilea peperomioides",
       "image": "./images/pilea.jpg",
-      "price": 5.99
+      "price": "$6.00"
     },
     {
       "id": 4,
@@ -41,12 +41,6 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
-    },
-    {
-      "name": "Strawberry",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRZ3v1UraaiSfMj9rV-MR1XPdCmn9WIN0okVDlgmvyyvuBsjnqS3e99NKZrh2BJV51LuF8YhuV&usqp=CAc",
-      "price": "30",
-      "id": 8
     }
   ]
 }
